@@ -38,7 +38,7 @@ class Utext extends StatelessWidget {
         color: color ?? AppColorsLight.onBackground,
       ),
       textAlign: textAlign ?? TextAlign.start,
-      overflow: overflow ?? TextOverflow.ellipsis,
+      overflow: overflow,
     );
   }
 }

@@ -26,7 +26,53 @@ class _MobileWelcomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      backgroundColor: AppColorsLight.background,
+      body: SizedBox(
+        height: double.infinity,
+        width: 100.w,
+        child: ListView(
+          children: [
+            SizedBox(
+              height: 4.h,
+            ),
+            Utext(
+              text: 'COMING SOON!',
+              fontSize: 24.sp,
+              color: AppColorsLight.primary,
+              textAlign: TextAlign.center,
+              fontWeight: FontWeight.w900,
+            ),
+            SizedBox(
+              height: 1.5.h,
+            ),
+            Utext(
+              text: '''The new TuvaTech Portfolio website'''
+                  ''' will be launching soon!''',
+              fontSize: 16.sp,
+              color: AppColorsLight.onBackground,
+              textAlign: TextAlign.center,
+              fontWeight: FontWeight.w700,
+            ),
+            SizedBox(
+              height: 1.5.h,
+            ),
+            SizedBox(
+              width: 10.w,
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: const [
+                  CountDownTile(),
+                  CountDownTile(),
+                  CountDownTile(),
+                  CountDownTile(),
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
 
